@@ -6,7 +6,7 @@ library(stringr)
  
 ### Data sheet pre-treatment:
 taxon_name<-c(test_data$taxon_name)
-relevant_taxon_name<-word(taxon_name, 1,2, sep=" ") # exclusion of irrelevant taxon_name information - NEEDS REVISION 
+relevant_taxon_name<-word(taxon_name, 1,2, sep=" ") # exclusion of irrelevant taxon_name information - NEEDS REVISION - Relevant synonym names vary on relevant number of words... 
 relevant_data<-data.frame(test_data$species, relevant_taxon_name, test_data$taxon_status_description, test_data$accepted_name_id, stringsAsFactors = FALSE) # dataframe of valuable variables
 relevant_data_clean<-na.omit(relevant_data) # exclude rows with NA values (ex.: species = NA )
 
