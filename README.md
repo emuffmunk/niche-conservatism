@@ -7,4 +7,6 @@ BIEN-R occurrence points will be extracted for species from Kew Plants Of The Wo
 
 In addition to the main script (niche_conservatism_analysis) an additional test-script (niche_conservatism_test) is included together with a test datasheet of only a few species (test_data) for quick code testing and reviewing on any computer.
 
+All scripts will be continously expanded and updated.
+
 More README information on shapefiles and plant kingdom phyologenetic tree will follow soon...
