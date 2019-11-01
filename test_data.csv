@@ -1,0 +1,17 @@
+checklist;checklist_id;ipni_id;family;genus;genus_hybrid_marker;species_hybrid_marker;species;infraspecific_rank;infraspecific_epithet;primary_author;parenthetical_author;taxon_status_description;taxon_name;lifeform;climate;redlist_category;accepted_name_id;accepted_family;accepted_name
+published;wcs-1;28572-1;Orchidaceae;Aa;;;;;;Rchb.f.;;Accepted;Aa Rchb.f.;;;;wcs-1;Orchidaceae;Aa
+published;wcs-129;1078-2;Euphorbiaceae;Acalypha;;;acapulcensis;;;Fernald;;Accepted;Acalypha acapulcensis Fernald;Nanophanerophyte;Seasonally Dry Tropical;;wcs-129;Euphorbiaceae;Acalypha acapulcensis
+published;wcs-130;337124-1;Euphorbiaceae;Acalypha;;;accedens;;;Müll.Arg.;;Accepted;Acalypha accedens Müll.Arg.;Nanophanerophyte;Wet Tropical;;wcs-130;Euphorbiaceae;Acalypha accedens
+published;wcs-131;;Euphorbiaceae;Acalypha;;;accedens;var.;brachyandra;Müll.Arg.;Baill.;Synonym;Acalypha accedens var. brachyandra (Baill.) Müll.Arg.;;;;wcs-130;Euphorbiaceae;Acalypha accedens
+published;wcs-132;1080-2;Euphorbiaceae;Acalypha;;;accedens;var.;genuina;Müll.Arg.;;Invalid;Acalypha accedens var. genuina Müll.Arg.;;;;wcs-130;Euphorbiaceae;Acalypha accedens
+published;wcs-329559;292918-2;Euphorbiaceae;Acalypha;;;accedens;f.;brachyandra;Müll.Arg.;Baill.;Synonym;Acalypha accedens f. brachyandra (Baill.) Müll.Arg.;;;;wcs-130;Euphorbiaceae;Acalypha accedens
+published;wcs-329560;1081-2;Euphorbiaceae;Acalypha;;;accedens;var.;viridis;Müll.Arg.;;Synonym;Acalypha accedens var. viridis Müll.Arg.;;;;wcs-130;Euphorbiaceae;Acalypha accedens
+published;wcs-178609;355249-1;Euphorbiaceae;Ricinocarpus;;;accedens;;;Kuntze;Müll.Arg.;Synonym;Ricinocarpus accedens (Müll.Arg.) Kuntze;;;;wcs-130;Euphorbiaceae;Acalypha accedens
+published;wcs-256;337209-1;Euphorbiaceae;Acalypha;;;brachyandra;;;Baill.;;Synonym;Acalypha brachyandra Baill.;;;;wcs-130;Euphorbiaceae;Acalypha accedens
+published;wcs-178635;355275-1;Euphorbiaceae;Ricinocarpus;;;brachyandrus;;;Kuntze;Baill.;Synonym;Ricinocarpus brachyandrus (Baill.) Kuntze;;;;wcs-130;Euphorbiaceae;Acalypha accedens
+published;wcs-501;337352-1;Euphorbiaceae;Acalypha;;;dupraeana;;;Baill.;;Synonym;Acalypha dupraeana Baill.;;;;wcs-130;Euphorbiaceae;Acalypha accedens
+published;wcs-134;337126-1;Euphorbiaceae;Acalypha;;;acrogyna;;;Pax;;Accepted;Acalypha acrogyna Pax;Nanophanerophyte or phanerophyte;Wet Tropical;;wcs-134;Euphorbiaceae;Acalypha acrogyna
+published;wcs-137;337127-1;Euphorbiaceae;Acalypha;;;acuminata;;;Benth.;;Accepted;Acalypha acuminata Benth.;Nanophanerophyte;Wet Tropical;;wcs-137;Euphorbiaceae;Acalypha acuminata
+published;wcs-178610;355250-1;Euphorbiaceae;Ricinocarpus;;;acuminatus;;;Kuntze;Benth.;Synonym;Ricinocarpus acuminatus (Benth.) Kuntze;;;;wcs-137;Euphorbiaceae;Acalypha acuminata
+published;wcs-324;337252-1;Euphorbiaceae;Acalypha;;;celebica;;;Koord.;;Unplaced;Acalypha celebica Koord.;;;;;Unplaced;Unplaced Unplaced
+published;wcs-178652;355292-1;Euphorbiaceae;Ricinocarpus;;;caturus;;;Kuntze;Blume;Illegitimate;Ricinocarpus caturus (Blume) Kuntze;;;;wcs-320;Euphorbiaceae;Acalypha caturus
