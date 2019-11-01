@@ -4,33 +4,34 @@ library(maps) #Useful for making quick maps of occurrences
 library(sp) #A package for spatial data
 library(stringr)
  
-### Data sheet pre-treatment:
-taxon_name<-c(test_data$taxon_name)
-relevant_taxon_name<-word(taxon_name, 1,2, sep=" ") # exclusion of irrelevant taxon_name information - NEEDS REVISION - Relevant synonym names vary on relevant number of words... 
-relevant_data<-data.frame(test_data$species, relevant_taxon_name, test_data$taxon_status_description, test_data$accepted_name_id, stringsAsFactors = FALSE) # dataframe of valuable variables
-relevant_data_clean<-na.omit(relevant_data) # exclude rows with NA values (ex.: species = NA )
+test_data<-read.csv("C:/Users/Emil/Documents/Aarhus_University/Master's_project/Primary_data/csv-files/test_data.csv", header = T, sep = ";", na.string = "")
 
+test_data_1 <- test_data[test_data$taxon_status_description != "Unplaced",] # Exclude "Unplaced" taxon_status_description
+#test_data_2 <- test_data_1[test_data_1$species != "NA",] # Exclude NA species - ERROR: Doesn't actually remove row with species = NA. Why not?
 
-### Occurrence extraction:
-species <- c(relevant_data_clean$relevant_taxon_name)
+#The following loop should be carried out with test_data_2...
 
-for(s in species){
-  #print(s)
-  BIEN_occurrence_species(s, only.new.world = F)
+target_species <- levels(test_data_1$accepted_name_id)
+
+for(i in target_species){
+  t <- test_data_1[test_data_1$accepted_name_id==i,]
+  u <- paste(t$genus, t$species)
+  occurrence_records <- dataframe() #create empty occurrence record file
+  #occurrence_records <- data.frame(scrubbed_species_binomial = character(),
+                                   #latitude = numeric(),
+                                   #longitude = numeric(),
+                                   #stringsAsFactors = F)  - Does the structure of the data.frame have to be assigned before hand?
+  
+  for(j in u){
+    occurrence_records[[BIEN_occurrence_species(j, only.new.world = F)]] #download stuff from BIEN and add to empty file - How to insert data into empty data.frame?
+  }
+  # do stuff with occurrence records for this species before moving on to next
+  occurrence_records = occurrence_records[!is.na(occurrence_records[,"latitude"]) $ !is.na(occurrence_records[,"longitude"]),] # excluding NA coordinates
+  occurrence_records = occurrence_records[!dupliated(occurrence_records),] # excluding repeated occurrences
+  # convert to spatial points?
 }
-
-occurrence_data<-BIEN_occurrence_species(s, only.new.world = F)
-occurrence_only<-data.frame(occurrence_data$scrubbed_species_binomial, occurrence_data$latitude, occurrence_data$longitude)# Isolate relevant information from BIEN-R
-occurrence_only
-
-## Question: Occurrence_only results in dataframe with 0 columns and 0 rows or ERROR: BIEN R server disconnects - Why?
-## Question: Can relevant_data_clean$test_data.accepted_name_id and relevant_data_clean$test_data.taxon_status_description be merged in this dataframe without issues? 
-
-### Connecting synonym occurrence data to accepted name: 
-for (i in occurrence_only){
-  #if relevant_data_clean$accepted_name_id is the same for different relevant_data_clean$taxon_name merge occurrence_only values to relevant_data_clean$accepted_name
-  ## Question: How to formulate this^ in code???
-}
+all_occurrence_records <- data.frame(occurrence_records$scrubbed_species_binomial, occurrence_records$latitude, occurrence_records$longitude)
+#print(all_occurrence_records)
 
 
 ############### Occurrence plots on maps and niche assignment
